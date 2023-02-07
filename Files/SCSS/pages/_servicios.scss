@@ -1,0 +1,73 @@
+//**** Propiedades CSS HTML servicios ****//
+
+
+// Propiedades portada html servicios //
+
+.cservicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw 10vw 1vw;
+     
+    & h1 {
+       font-size: 3em;
+       font-weight: 500;
+       color: $color-titulo-principal;
+    }
+      
+}
+ 
+ .ctitulo_servicios {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vw;
+ 
+    & p {
+        font-size: 1em;
+        font-weight: 500;
+        color: $color-subtit-principal; 
+        text-align: center;
+        width: 80%;  
+    }
+}
+
+
+// Propiedades flexbox cuadros html servicios //
+
+.servicios_container {
+   font-family: Poppins;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    
+    .servicios_box {
+        position: relative;
+        background-color: azure;
+        padding: 20px 40px 40px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+        & h2 {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+            color: #01e1ff;
+            font-weight: 700;
+            //z-index: 1;
+            text-transform: uppercase;
+        }
+
+        & p {
+            margin: 0;
+            padding: 0;
+            color: darkslateblue;
+        }
+}

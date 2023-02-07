@@ -1,0 +1,46 @@
+//**** Propiedades CSS HTML nosotros ****//
+
+.cnosotros {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10vw 10vw 1vw;
+   
+   & h1 {
+      font-size: 3em;
+      font-weight: 500;
+      color: $color-titulo-principal;
+   }
+     
+}
+
+.ctitulo_nosotros {
+   display: flex;
+   justify-content: center;
+   padding-bottom: 3vw;
+
+   & p {
+       font-size: 1.5em;
+       font-weight: 500;
+       color: $color-subtit-principal;
+       text-align: center;
+        width: 80%;   
+   }
+}
+
+
+.nosotros_historia{
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #7b83b1, #a1abe7);
+  color: $color-subtit-principal;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 4vw;
+  text-align: center;
+}
+

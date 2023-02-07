@@ -1,0 +1,55 @@
+// Animations de Header //
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0px rgba(255,255,255, 0.6);
+        background: rgba(255,255,255, 0.6);
+    }
+    to {
+        box-shadow: 0 0 0 1000px rgba(255,255,255, 0.5);
+        background: rgba(255,255,255, 0);
+    }
+}
+
+@keyframes openTop {
+    0% {
+        transform: translateY(-5px)
+        rotate(0deg);
+    }
+}
+
+
+// Animations de Carrousel //
+
+@keyframes animateCarrousel {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}

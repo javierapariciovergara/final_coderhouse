@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+
+/********************* PROPIEDADES CSS GENERALES PARA TODOS LOS HTML *************************************/
+
+
+/**** propiedades generales del Body ****/
+
+body{
+    font-family: 'Montserrat', 'Poppins', Arial, Verdana, Tahoma;
+    background-color: #a1abe7;
+}
+
+
+/**** tamaño, posicionamiento y color de fondo del header ****/
+
+header{
+    width: 90%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**** tamaño y posicionamiento de logo principal ****/
+
+#marca1{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-top: 0.3em;
+}
+
+
+/**** propiedades de seccion principal/portada ****/
+
+.cindex {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.cindex h2 {
+    font-size: 3em;
+    font-weight: 500;
+    color: aquamarine;
+}
+
+.cindex p {
+    font-size: 1em;
+    font-weight: 300;
+    color: azure;
+}
+
+/**** propiedades imagen portada ****/
+
+.imagen_portada {
+    
+    
+    text-align: center;
+    align-items: center;
+    padding-bottom: 3em;   
+}
+
+.imagen_portada img {
+    width: 90%;
+}
+
+/**** propiedades de navbar ****/
+/**** tamaño y posicionamiento de la botonera ****/
+
+#botonera_principal{
+      float: right;
+}
+
+#botonera_principal ul li {
+ list-style: none;
+ display: inline-block;
+ background-color: rgba(30, 40, 40, 0.4);
+}
+
+#botonera_principal ul li a {
+ position: relative;
+ padding: 10px 15px;
+ text-align: center;
+ font-size: 22px;
+ color: #262626;
+ text-transform: uppercase;
+ text-decoration: none;
+ font-family: 'Montserrat';
+}
+
+
+/**** propiedades de footer ****/
+
+footer {
+    margin-top: 4em;
+    bottom: 0px;
+    font-family: 'Montserrat';
+    color: azure;
+    background-color: rgba(0, 0, 40, 0.4);
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.8em;
+}
+
+.foot_body {
+    display: flex;
+}
+
+.foot_columna1,
+.foot_columna2,
+.foot_columna3 {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.foot_columna1 h2,
+.foot_columna2 h2,
+.foot_columna3 h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.caja_foot {
+    text-align: center;
+}
+
+
+
+/********************* FIN PROPIEDADES CSS GENERALES PARA TODOS LOS HTML *************************************/
+
+
+/*********************** PROPIEDADES CSS ESPECIFICOS HTML PRODUCTOS *********************************/
+
+
+/**** propiedades portada html productos ****/
+
+.cproductos {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.cproductos h2 {
+    font-size: 3em;
+    font-weight: 500;
+    color: aquamarine;
+}
+
+.cproductos p {
+    font-size: 1em;
+    font-weight: 300;
+    color: azure;
+}
+
+/**** propiedades zona de cards y de cards con imagenes ****/
+/**** propiedades zona de cards animaciones transitions ****/
+
+.body_tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
+}
+
+.box_tarjeta{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.box_tarjeta:hover {
+    height: 420px;
+}
+
+.box_tarjeta .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box_tarjeta .imgBox img {
+    max-width: 100%;
+    opacity: 0.3;
+    transition: 1s;
+}
+
+.box_tarjeta:hover .imgBox img {
+    opacity: 1;
+}
+
+.box_tarjeta:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: cornsilk;
+    z-index: -1;
+}
+
+.box_tarjeta:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: cornsilk;
+    z-index: -2;
+    filter: blur(20px);
+}
+
+.box_tarjeta .content {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 2s;
+}
+
+.box_tarjeta:hover .content {
+    opacity: 1;
+}
+
+.box_tarjeta .content h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.box_tarjeta .content h2 span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+/*********************** FIN PROPIEDADES CSS ESPECIFICOS HTML PRODUCTOS *********************************/
+
+
+/*********************** PROPIEDADES CSS ESPECIFICOS HTML SERVICIOS *********************************/
+
+
+/**** propiedades portada html servicios ****/
+
+.cservicios {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.cservicios h2 {
+    font-size: 3em;
+    font-weight: 500;
+    color: aquamarine;
+}
+
+.cservicios p {
+    font-size: 1em;
+    font-weight: 300;
+    color: azure;
+}
+
+
+/**** propiedades cards html servicios ****/
+
+.servicios_container {
+   font-family: Poppins;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    }
+
+.servicios_container .servicios_box {
+    position: relative;
+    background-color: azure;
+    padding: 20px 40px 40px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.servicios_container .servicios_box h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    color: #01e1ff;
+    font-weight: 700;
+    z-index: 1;
+    text-transform: uppercase;
+
+}
+
+.servicios_container .servicios_box p {
+    margin: 0;
+    padding: 0;
+    color: darkslateblue;
+}
+
+
+/*********************** FIN PROPIEDADES CSS ESPECIFICOS HTML SERVICIOS *********************************/
+
+
+
+/*********************** PROPIEDADES CSS ESPECIFICOS HTML NOSOTROS *********************************/
+
+/* a futuro segun contenido */
+
+/*********************** FIN PROPIEDADES CSS ESPECIFICOS HTML NOSOTROS *********************************/
+
+
+
+/*********************** PROPIEDADES CSS ESPECIFICOS HTML CONTACTO *********************************/
+
+
+/**** propiedades de area principal/portada ****/
+
+.contacto {
+    position: relative;
+    min-height: 30vh;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto .ccontenido {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contacto .ccontenido h2 {
+    font-size: 3em;
+    font-weight: 500;
+    color: aquamarine;
+}
+
+.contacto .ccontenido p {
+    font-size: 1em;
+    font-weight: 300;
+    color: azure;
+}
+
+
+/**** propiedades de texto e iconos contenedor datos direccion email telefono ****/
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.container .ContactoInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .ContactoInfo .caja {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+
+.container .ContactoInfo .caja .icon {
+    min-width: 60px;
+    height: 60px;
+    background: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5em;   /* tamaño del icono!! */
+}
+
+.container .ContactoInfo .caja .ContactoText {
+    /*display: flex;*/
+    margin-left: 20px;
+    font-size: 1em;
+    color: azure;
+    flex-direction: column;
+}
+
+.container .ContactoInfo .caja .ContactoText h3 {
+    font-weight: 900;
+    color: #01e1ff;
+}
+
+/**** fin propiedades de texto e iconos contenedor datos direccion email telefono ****/
+
+
+/***** propiedades y futuras config para container de formulario contacto *****/
+
+/* aspecto y color de cuadro trasero de formulario */
+
+.FormularioContacto {
+    width: 40%;
+    padding: 40px;
+    background: azure;
+}
+
+.FormularioContacto h2 {
+    font-size: 2em;
+    color: #01e1ff;
+    font-weight: 900;
+}
+
+.FormularioContacto .InputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/**** propiedades campos del formulario ****/
+
+.FormularioContacto .InputBox input,
+.FormularioContacto .InputBox textarea
+ {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    resize: none; 
+    background-color: azure;   
+}
+
+
+/* Animacion de texto campos del form al posicionar para escribir sobre los campos */
+
+
+.FormularioContacto .InputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 1s;
+    color: cornflowerblue;
+
+}
+
+.FormularioContacto .InputBox input:focus ~ span,
+.FormularioContacto .InputBox input:valid ~ span,
+.FormularioContacto .InputBox textarea:focus ~ span,
+.FormularioContacto .InputBox textarea:valid ~ span 
+{
+    
+    color: crimson;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+
+
+/**** propiedades forma boton del formulario ****/
+
+.FormularioContacto .InputBox input[type="submit"] {
+    width: 100px;
+    background: #01e1ff;
+    color: azure;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1,2em;
+
+}
+
+
+/*********************** FIN PROPIEDADES CSS ESPECIFICOS HTML CONTACTO *********************************/
+
+
+/***********************  *********************************/
+/***********************  *********************************/
+
+/*********************** INICIO SECCION MEDIA QUERIES PARA RESPONSIVE *********************************/
+
+
+
+@media all and (min-width: 376px) and (max-width: 1100px) {
+    
+    header{
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display:flex;
+        /*align-items: center;*/
+    }
+    
+    #marca1{
+        width: 90%;
+        height: auto;
+        float: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    #botonera_principal{
+        width: 90%;
+        height: auto;
+        float: none;
+        margin-top: 1.3em;
+    }
+    
+        #botonera_principal ul{
+            float: none;
+        }
+    
+        #botonera_principal ul li{
+            display: block;
+            float: none;
+            background-color: lavenderblush;
+        }
+    
+        #botonera_principal ul li a{
+            width: 100%;
+            box-sizing: border-box;
+            /*text-align: center;*/
+            margin-bottom: 2em;
+            display: block;
+            padding: 2em;
+            
+        }
+    
+       
+    
+    .contacto { 
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .ContactoInfo {
+        margin-bottom: 3em;
+    }
+    .container .ContactoInfo,
+    .FormularioContacto
+    {
+        width: 100%;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+    
+    .foot_body {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .foot_columna_mapa {
+        justify-content: center;
+    }
+
+
+}
+
+@media all and (max-width: 375px) {
+    
+    header{
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+    #marca1{
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    #botonera_principal{
+        width: 90%;
+        height: auto;
+        float: none;
+        margin-top: 1.3em;
+    }
+    
+        #botonera_principal ul{
+            float: none;
+        }
+    
+        #botonera_principal ul li{
+            display: block;
+            float: none; 
+            background-color: lavenderblush;
+        }
+    
+        #botonera_principal ul li a{
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            margin-bottom: 2em;
+            display: block;
+            padding: 1.5em;
+          
+        }
+    
+    
+    .contacto { 
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .ContactoInfo {
+        margin-bottom: 3em;
+    }
+    .container .ContactoInfo,
+    .FormularioContacto
+    {
+        width: 100%;
+    }
+
+    
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+        
+    .foot_body {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .foot_columna_mapa {
+        justify-content: center;
+    }
+
+
+}
+
+/*********************** FIN SECCION MEDIA QUERIES PARA RESPONSIVE *********************************/

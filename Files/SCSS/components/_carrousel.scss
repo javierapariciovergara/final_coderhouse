@@ -1,0 +1,124 @@
+//**** CSS Propiedades de Carrousel ****//
+
+// Nota para Marco: //
+// Opte por este carrousel puro CSS porque tiene muchas propiedades para jugar y ajustar, lo considero una opcion a los prearmados de los frame //
+// y no hay embrollos con JS :) //
+
+
+.container_carr {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90vh;
+
+    .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500%;
+        height: 100%;
+        animation: animateCarrousel 30s linear infinite;
+    }
+
+    &:hover .slider {
+        /*transition: opacity .5s;*/
+        -webkit-animation-play-state: paused; 
+        -moz-animation-play-state: paused; 
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+        cursor: pointer;
+    }
+
+    .slider .slide {
+        position: relative;
+        width: 20%;
+        height: 100%;
+        float: left;
+    
+        .caption {
+            position: absolute;
+            bottom: 60px;
+            left: 60px;
+            right: 60px;
+            padding: 30px;
+            background-color:rgba(0, 20, 50, 0.4);
+            /* rgba(0, 0, 0, 0.5) color de fondo alternativo */
+            /* el uso de rgba permite añadir transparencia en la misma linea */
+            box-sizing: border-box;
+        }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                color: $color-subtit-principal;
+                font-size: 48px;
+                transition: 0.7s;
+            }
+    
+            p {
+                margin: 0;
+                padding: 0;
+                color: #01e1ff;
+                font-size: 18px;
+            }   
+    }
+}
+
+
+// CSS Carrousel - Seteo de path de imagenes //
+
+
+.container_carr .slider .slide.slide1 {
+    background-image: url(../Img/car1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container_carr .slider .slide.slide2 {
+    background-image: url(../Img/car2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container_carr .slider .slide.slide3 {
+    background-image: url(../Img/car3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container_carr .slider .slide.slide4 {
+    background-image: url(../Img/car4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+    .container_carr {
+        height: 50vh;
+        /* achicar el porcentaje ocupado de viewport en responsive mejora 
+        la forma del carrousel en responsive, falta afinar mas*/
+    }
+
+    .container_carr .slider .slide .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 20px;
+    }
+    
+    .container_carr .slider .slide .caption h2 {
+        margin: 0 0 10px;
+        font-size: 30px;
+    }
+    
+    .container_carr .slider .slide .caption p {
+        font-size: 16px;
+    }
+}

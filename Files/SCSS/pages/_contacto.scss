@@ -1,0 +1,152 @@
+// **** CSS Propiedades HTML contacto ****//
+
+// propiedades de area principal/portada //
+
+.ccontenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw 10vw 1vw;
+    
+        & h1 {
+        font-size: 3em;
+        font-weight: 500;
+        color: $color-titulo-principal;
+        }
+        
+}
+
+.ctitulo_contacto {
+    
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vw;
+    
+    & p {
+        font-size: 1em;
+        font-weight: 500;
+        color: $color-subtit-principal;   
+        text-align: center;
+        width: 80%;
+            }
+ }
+
+.contacto {
+    position: relative;
+    min-height: 30vh;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// propiedades de texto e iconos contenedor datos direccion email telefono //
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+
+    .ContactoInfo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .ContactoInfo .caja {
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+
+            .caja .icon {
+                min-width: 60px;
+                height: 60px;
+                background: aquamarine;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 1.5em;
+                //*tamaño de icono*//   
+            }
+
+            .caja .ContactoText {
+                margin-left: 20px;
+                font-size: 1em;
+                color: azure;
+                flex-direction: column;
+            }
+                & h3 {
+                    font-weight: 900;
+                    color: #01e1ff;
+                }
+}
+
+// fin propiedades de texto e iconos contenedor datos direccion email telefono //
+
+
+// propiedades y futuras config para container de formulario contacto //
+
+.FormularioContacto {
+    width: 40%;
+    padding: 40px;
+    background: azure;
+
+    & h2 {
+        font-size: 2em;
+        color: #1a7eb8;
+        font-weight: 900;
+    }
+
+        .InputBox {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .InputBox input, textarea {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333333;
+            outline: none;
+            resize: none; 
+            background-color: azure;   
+        }
+
+        .InputBox span {
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 1s;
+            color: cornflowerblue;
+        }
+
+        .InputBox input:focus ~ span,
+        .InputBox input:valid ~ span,
+        .InputBox textarea:focus ~ span,
+        .InputBox textarea:valid ~ span {
+            color: crimson;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+
+        .InputBox input[type="submit"] {
+            width: 100px;
+            background: #01e1ff;
+            color: azure;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 1,2em;
+        }
+}

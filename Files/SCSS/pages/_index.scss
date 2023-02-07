@@ -1,0 +1,44 @@
+//**** CSS Propiedades HTML index ****//
+
+// propiedades de Imagen Portada //
+// alternativa a Carrousel //
+
+/*
+.imagen_portada {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 3em;   
+}
+
+.imagen_portada img {
+    width: 90%;
+}
+*/
+
+
+// propiedades de Titulo y Parrafo Principal //
+
+.cindex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw 10vw 1vw;
+    
+    & h1 {
+       font-size: 3em;
+       font-weight: 500;
+       color: $color-titulo-principal;
+    }
+}
+
+.ctitulo_main {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vw;
+    
+    & p {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: $color-subtit-principal;   
+    }
+}
